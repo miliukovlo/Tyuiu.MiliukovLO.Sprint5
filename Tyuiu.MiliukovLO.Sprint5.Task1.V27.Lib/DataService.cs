@@ -10,7 +10,7 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task1.V27.Lib
             double start = startValue, end = stopValue, step = 1;
             for (double x = start; x <= end; x += step)
             {
-                double result = ((3 * x - 1.5) / Math.Sin(x) - 3 + x) + 2;
+                double result = ((3 * x - 1.5) /( Math.Sin(x) - 3 + x)) + 2;
                 if (double.IsNaN(result) || double.IsInfinity(result))
                 {
                     result = 0;
