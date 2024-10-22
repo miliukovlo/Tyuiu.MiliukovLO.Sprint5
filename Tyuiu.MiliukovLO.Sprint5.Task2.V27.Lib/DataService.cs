@@ -18,6 +18,7 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task2.V27.Lib
                     }
                     File.AppendAllText(tempFilePath, $"{matrix[i, j]}\n");
                 }
+                File.AppendAllText(tempFilePath, $"{matrix}\n");
             }
             return tempFilePath;
         }
