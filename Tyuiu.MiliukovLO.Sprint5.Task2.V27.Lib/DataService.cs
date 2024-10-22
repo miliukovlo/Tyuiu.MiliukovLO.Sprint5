@@ -18,16 +18,15 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task2.V27.Lib
                     {
                         matrix[i, j] = 0;
                     }
-                    //File.AppendAllText(tempFilePath, $"{matrix[i, j]}");
+                    File.AppendAllText(tempFilePath, $"{matrix[i, j]}");
                     if (j < matrix.GetLength(1) - 1)
                     {
-                        //File.AppendAllText(tempFilePath, ";");
+                        File.AppendAllText(tempFilePath, ";");
                     }
                 }
-                //File.AppendAllText(tempFilePath, "\n");
-                
+                File.AppendAllText(tempFilePath, "\n");
+
             }
-            File.AppendAllText(tempFilePath, "0;4;0\n0;0;4\n4;0;8");
             return tempFilePath;
         }
     }
