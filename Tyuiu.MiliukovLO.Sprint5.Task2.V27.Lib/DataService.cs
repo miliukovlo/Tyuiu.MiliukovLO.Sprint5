@@ -14,10 +14,10 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task2.V27.Lib
                 {
                     if ((i + j) % 2 == 0)
                     {
-                         matrix[i, j] = 0;
+                        matrix[i, j] = 0;
                     }
                 }
-                int[] array = new int[matrix.GetLength(j)];
+                int[] array = {matrix.GetLength(i)};
                 File.AppendAllText(tempFilePath, $"{array}\n");
             }
             return tempFilePath;
