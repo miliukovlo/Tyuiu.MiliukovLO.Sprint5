@@ -6,7 +6,6 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task2.V27.Lib
     {
         public string SaveToFileTextData(int[,] matrix)
         {
-            int rowSum = 0;
             string tempFilePath = Path.GetTempFileName();
             string finalPath = Path.Combine(tempFilePath, "OutPutFileTask2.csv");
             for (int i = 0; i < matrix.GetLength(0); i++)
@@ -15,11 +14,11 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task2.V27.Lib
                 {
                     if ((i + j) % 2 == 0)
                     {
-                        rowSum += matrix[i, j];
+                         matrix[i, j] = 0;
                     }
+                    File.AppendAllText(tempFilePath, $"{matrix[i, j]}\n");
                 }
             }
-            File.AppendAllText(tempFilePath, rowSum.ToString());
             return tempFilePath;
         }
     }
