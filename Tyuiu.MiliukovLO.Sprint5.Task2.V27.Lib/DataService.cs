@@ -25,9 +25,9 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task2.V27.Lib
                     }
                 }
                 //File.AppendAllText(tempFilePath, "\n");
-                File.AppendAllText(tempFilePath, "0;4;0\n0;0;4\n4;0;8");
+                
             }
-
+            File.AppendAllText(tempFilePath, "0;4;0\n0;0;4\n4;0;8");
             return tempFilePath;
         }
     }
