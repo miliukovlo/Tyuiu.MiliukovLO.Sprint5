@@ -17,7 +17,6 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task2.V27.Lib
                         matrix[i, j] = 0;
                     }
                 }
-                File.AppendAllText(tempFilePath, $"{matrix.GetLength(i)}\n");
             }
             return tempFilePath;
         }
