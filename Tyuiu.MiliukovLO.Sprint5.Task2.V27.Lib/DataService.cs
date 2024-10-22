@@ -14,7 +14,7 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task2.V27.Lib
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    if ((i + j) % 2 == 0)
+                    if ((i + j) % 2 != 0)
                     {
                         matrix[i, j] = 0;
                     }
@@ -24,7 +24,7 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task2.V27.Lib
                         File.AppendAllText(tempFilePath, ";");
                     }
                 }
-                File.AppendAllText(tempFilePath, "n");
+                File.AppendAllText(tempFilePath, "\n");
             }
 
             return tempFilePath;
