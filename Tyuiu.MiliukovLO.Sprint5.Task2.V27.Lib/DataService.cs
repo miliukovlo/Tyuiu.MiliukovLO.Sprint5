@@ -14,11 +14,15 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task2.V27.Lib
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
+                    int valueToWrite = matrix[i, j];
+
                     if ((i + j) % 2 != 0)
                     {
-                        matrix[i, j] = 0;
+                        valueToWrite = 0;
                     }
-                    File.AppendAllText(tempFilePath, $"{matrix[i, j]}");
+
+                    File.AppendAllText(tempFilePath, $"{valueToWrite}");
+
                     if (j < matrix.GetLength(1) - 1)
                     {
                         File.AppendAllText(tempFilePath, ";");
