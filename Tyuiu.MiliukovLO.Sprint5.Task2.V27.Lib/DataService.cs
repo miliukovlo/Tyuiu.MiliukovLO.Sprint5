@@ -16,9 +16,9 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task2.V27.Lib
                     {
                          matrix[i, j] = 0;
                     }
-                    File.AppendAllText(tempFilePath, $"{matrix[i, j]}\n");
                 }
-                File.AppendAllText(tempFilePath, $"{matrix}\n");
+                int[] array = new int[matrix.GetLength(j)];
+                File.AppendAllText(tempFilePath, $"{array}\n");
             }
             return tempFilePath;
         }
