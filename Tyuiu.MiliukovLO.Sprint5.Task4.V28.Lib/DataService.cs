@@ -1,4 +1,6 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint5;
+﻿using System.Globalization;
+using System.IO;
+using tyuiu.cources.programming.interfaces.Sprint5;
 
 namespace Tyuiu.MiliukovLO.Sprint5.Task4.V28.Lib
 {
@@ -8,8 +10,8 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task4.V28.Lib
         {
             double number = 0;
             string data = File.ReadAllText(path);
-            number = double.Parse(data);
-            return Math.Round((3 * Math.Pow(number, 3)) / Math.Sin(number),3);
+            number = double.Parse(data, CultureInfo.InvariantCulture); 
+            return Math.Round((3 * Math.Pow(number, 3)) / Math.Sin(number), 3);
         }
     }
 }
