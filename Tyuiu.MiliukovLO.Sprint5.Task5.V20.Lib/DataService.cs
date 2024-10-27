@@ -8,16 +8,20 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task5.V20.Lib
         {
             string text = File.ReadAllText(path);
             string[] strings = text.Split(',');
-            List<string> data = new List<string>();
+            List<int> data = [];
             double sum = 0;
             foreach (string str in strings)
             {
                 if (int.TryParse(str.Trim(), out int number))
                 {
-                    sum += number;
+                    data.Add(number);
                 }
             }
-            return Math.Round(sum/strings.Length,3);
+            foreach (nuint number in data)
+            {
+                sum += number;
+            }
+            return Math.Round(sum/ data.Count, 3);
         }
     }
 }
