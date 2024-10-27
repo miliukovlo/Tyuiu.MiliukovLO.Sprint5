@@ -14,7 +14,7 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task5.V20.Lib
             foreach (string str in strings)
             {
                 double number = double.Parse(str, CultureInfo.InvariantCulture);
-                if (number % 1 == 0)
+                if (number % 1 == 0 && number >= -10 && number <= 10)
                 {
                     data.Add(number);
                 }
