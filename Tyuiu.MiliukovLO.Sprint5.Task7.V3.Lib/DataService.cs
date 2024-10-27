@@ -11,7 +11,7 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task7.V3.Lib
         {
             string content = File.ReadAllText(path);
 
-            string result = Regex.Replace(content, "[а-яА-ЯёЁ]", "");
+            string result = Regex.Replace(content, "[а-яА-ЯёЁ]", "".Trim());
 
             string temp = Path.GetTempPath();
             string outPath = Path.Combine(temp, "OutPutDataFileTask7V3.txt");
