@@ -11,13 +11,13 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task5.V20.Lib
         {
             string text = File.ReadAllText(path);
             string[] strings = text.Split(',');
-            List<int> validNumbers = new List<int>();
+            List<double> validNumbers = new List<double>();
 
             foreach (string str in strings)
             {
                 if (int.TryParse(str.Trim(), out int number))
                 {
-                   validNumbers.Add(number);
+                   validNumbers.Add(Convert.ToDouble(str));
                 }
             }
 
