@@ -1,4 +1,7 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint5;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using tyuiu.cources.programming.interfaces.Sprint5;
 
 namespace Tyuiu.MiliukovLO.Sprint5.Task5.V20.Lib
 {
@@ -8,16 +11,24 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task5.V20.Lib
         {
             string text = File.ReadAllText(path);
             string[] strings = text.Split(',');
-            List<string> data = new List<string>();
-            double sum = 0;
+            List<int> validNumbers = new List<int>();
+
             foreach (string str in strings)
             {
                 if (int.TryParse(str.Trim(), out int number))
                 {
-                    sum += number;
+                   validNumbers.Add(number);
                 }
             }
-            return Math.Round(sum/strings.Length,3);
+
+            double sum = 0;
+            foreach (int number in validNumbers)
+            {
+                sum += number;
+            }
+
+            double average = sum / validNumbers.Count;
+            return Math.Round(average, 3);
         }
     }
 }
