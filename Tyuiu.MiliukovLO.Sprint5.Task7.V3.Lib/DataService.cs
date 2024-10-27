@@ -11,11 +11,7 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task7.V3.Lib
         {
             string content = File.ReadAllText(path);
 
-            // Удаление русских букв без замены на пробел
-            string result = Regex.Replace(content, "[а-яА-ЯёЁ]", "");
-
-            // Удаление лишних пробелов (если необходимо)
-            result = Regex.Replace(result, @"s+", " ").Trim();
+            string result = Regex.Replace(content, "[а-яА-ЯёЁ]", "".Trim());
 
             string temp = Path.GetTempPath();
             string outPath = Path.Combine(temp, "OutPutDataFileTask7V3.txt");
