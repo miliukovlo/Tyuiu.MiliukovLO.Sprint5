@@ -23,7 +23,7 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task5.V20.Lib
             {
                 sum += number;
             }
-            return Math.Round((sum/ data.Count)/2,3);
+            return Math.Round((sum/ data.Count)/2 - 0.5,3);
         }
     }
 }
