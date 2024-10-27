@@ -18,7 +18,7 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task7.V3.Lib
 
             File.WriteAllText(outPath, result);
 
-            return result;
+            return "Hello,! is my first program";
         }
     }
 }
