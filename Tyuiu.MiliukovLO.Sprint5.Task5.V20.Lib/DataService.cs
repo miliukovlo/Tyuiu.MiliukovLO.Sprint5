@@ -8,19 +8,22 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task5.V20.Lib
         public double LoadFromDataFile(string path)
         {
             string text = File.ReadAllText(path);
-            string[] strings = text.Split(',');
+            string[] strings = text.Split(' ');
             List<double> data = [];
             double sum = 0;
             foreach (string str in strings)
             {
                 double number = double.Parse(str, CultureInfo.InvariantCulture);
-                data.Add(number);
+                if (number % 1 == 0)
+                {
+                    data.Add(number);
+                }
             }
-            foreach (nuint number in data)
+            foreach (double number in data)
             {
                 sum += number;
             }
-            return Math.Round(sum/ data.Count, 3);
+            return Math.Round(sum/ data.Count,3);
         }
     }
 }
