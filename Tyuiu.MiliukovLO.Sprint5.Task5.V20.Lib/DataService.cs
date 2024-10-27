@@ -1,4 +1,5 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint5;
+﻿using System.Globalization;
+using tyuiu.cources.programming.interfaces.Sprint5;
 
 namespace Tyuiu.MiliukovLO.Sprint5.Task5.V20.Lib
 {
@@ -8,14 +9,12 @@ namespace Tyuiu.MiliukovLO.Sprint5.Task5.V20.Lib
         {
             string text = File.ReadAllText(path);
             string[] strings = text.Split(',');
-            List<int> data = [];
+            List<double> data = [];
             double sum = 0;
             foreach (string str in strings)
             {
-                if (int.TryParse(str.Trim(), out int number))
-                {
-                    data.Add(number);
-                }
+                double number = double.Parse(str, CultureInfo.InvariantCulture);
+                data.Add(number);
             }
             foreach (nuint number in data)
             {
